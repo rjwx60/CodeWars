@@ -72,4 +72,24 @@ function toFixed(x) {
   return x;
 }
 
-console.log(toFixed(factorial(30)));
+// console.log(toFixed(factorial(30)));
+
+
+function orderWeight(string){
+  const initArr =  string.split(' ').map(cv => {
+    return {
+      value: cv,
+      weight: cv.split('').reduce((ac, ccv) => +ac + +ccv, 0)
+    }
+  })
+  return initArr.sort((a, b) => {
+    return  a.weight < b.weight ? -1  : 
+            a.weight > b.weight ? 1   : 
+            a.value < b.value   ? -1  :
+            a.value > b.value   ? 1   : 0
+  }).map(cv => cv.value).join(' ');
+}
+
+
+console.log(orderWeight("103 123 4444 99 2000")) // "2000 103 123 4444 99"
+console.log(orderWeight("2000 10003 1234000 44444444 9999 11 11 22 123")) // "11 11 2000 10003 22 123 1234000 44444444 9999"
