@@ -31,23 +31,37 @@
 
 /** 
  * Other solution:
- * Source: https://www.codewars.com/kata/regex-validate-pin-code/solutions
+ * Source: https://www.codewars.com/kata/number-of-trailing-zeros-of-n
  * 
  * Copyright belongs to the original author. 
  * If it infringes on your rights and interests, please email me: rjwx60@gmail.com
  */
-function zeros (n) {
+function zeros(n) {
   var num = 0;
-  while ( n > 4 ) {
-    n = Math.floor(n/5);
+  while (n > 4) {
+    n = Math.floor(n / 5);
     num += n;
   }
   return num;
 }
- 
+
+function zeros(n) {
+  var zs = 0;
+  while (n > 0) {
+    n = Math.floor(n / 5);
+    zs += n
+  }
+  return zs;
+}
+
+function zeros(n) {
+  n = ~~(n / 5);
+  return n + (n < 5 ? 0 : zeros(n));
+}
+
 /**
  * Think:
- * 1. wonderful task! 
- * https://segmentfault.com/a/1190000011727836
- * 
+ * 1. wonderful task!
+ * 2. 还
+ *
  */
