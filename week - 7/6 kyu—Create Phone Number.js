@@ -29,7 +29,7 @@ function createPhoneNumber(numbers){
 
 /** 
  * Other solution:
- * Source: https://www.codewars.com/kata/regex-validate-pin-code/solutions
+ * Source: https://www.codewars.com/kata/create-phone-number/solutions
  * 
  * Copyright belongs to the original author. 
  * If it infringes on your rights and interests, please email me: rjwx60@gmail.com
